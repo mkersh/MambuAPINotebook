@@ -1,10 +1,5 @@
 {
-  "externalId": "extID241",
-  "amount": 897,
-  "notes": "Transfer Notes",
-  "transferDetails": {
-    "linkedAccountId": "ADRO254",
-		"linkedAccountType": "DEPOSIT",
-    "linkedAccountKey": "8a81868e6808ec4501680e7898bf26e5"
-  }
+  "externalId": "key777b",
+	"amount": 55,
+  "notes": "Testing Fee1"
 }
