@@ -1,5 +1,5 @@
 import requests
-import pystache  
+import pystache
 import json
 
 from IPython.core.display import HTML
@@ -35,3 +35,21 @@ def PRINT(r):
     
 def PRINTHTML(htmlStr):
     HTML(htmlStr)
+    
+# -------------------------------------------------------------------------------
+# Other more specific printing/output options
+
+cc = 0
+def printCount():
+    global cc
+    cc = cc + 1
+    return "[{0}]".format(cc)
+
+def printCustomers(r):
+    global cc
+    cc = 0
+    obj = {
+            'customers': r.json(),
+            'outer': printCount
+    }
+    print(pystache.render("{{#customers}} {{outer}} {{firstName}} {{lastName}}\n {{/customers}}", obj))
