@@ -27,11 +27,26 @@ def POST(url, body=None, *args,**kargs):
         r = requests.post(url, data=data, **kargs )
         return r
 
+def PATCH(url, body=None, *args,**kargs):
+    with open (body, "r") as myfile:
+        data=myfile.read()
+        url = pystache.render(url, ENV)
+        r = requests.patch(url, data=data, **kargs )
+        return r
+    
+def DELETE(url, *args,**kargs):
+    url = pystache.render(url, ENV)
+    r = requests.delete(url, **kargs )
+    return r
+
 def PRINT(r):
     print ("API status: ", end="")
     print(r.status_code)
     print ("JSON Response:")
-    print(json.dumps(r.json(), indent=4, sort_keys=True))
+    try:
+        print(json.dumps(r.json(), indent=4, sort_keys=True))
+    except:
+        print("NO Content")
     
 def PRINTHTML(htmlStr):
     HTML(htmlStr)
