@@ -34,6 +34,13 @@ def PATCH(url, body=None, *args,**kargs):
         r = requests.patch(url, data=data, **kargs )
         return r
     
+def PUT(url, body=None, *args,**kargs):
+    with open (body, "r") as myfile:
+        data=myfile.read()
+        url = pystache.render(url, ENV)
+        r = requests.put(url, data=data, **kargs )
+        return r
+    
 def DELETE(url, *args,**kargs):
     url = pystache.render(url, ENV)
     r = requests.delete(url, **kargs )
