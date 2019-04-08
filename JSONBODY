@@ -1,5 +1,10 @@
 {
-  "externalId": "key777b",
-	"amount": 55,
-  "notes": "Testing Fee1"
+  
+  "accountType": "CURRENT_ACCOUNT",
+  "name": "MKCurTest2",
+  "accountHolderKey": "8a8587dd69fd75850169fd7b93872d00",
+  "productTypeKey": "8a8587c769fd6e0c0169fd8022cc74b0",
+  "currencyCode": "GBP",
+  "accountHolderType": "CLIENT",
+  "accountState":"PENDING_APPROVAL"
 }
