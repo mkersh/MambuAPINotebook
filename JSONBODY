@@ -3,7 +3,7 @@
   "accountType": "CURRENT_ACCOUNT",
   "name": "MKCurTest2",
   "accountHolderKey": "8a8186ac692678910169288509c606bc",
-  "productTypeKey": "8a8187e469fd77c60169fdccbc2404ba",
+  "productTypeKey": "8a81871a6a000db5016a009fe6380105",
   "currencyCode": "EUR",
   "accountHolderType": "CLIENT",
   "accountState":"PENDING_APPROVAL"
