@@ -1,24 +1,10 @@
 {
-  "loanAmount": 30000.0,
-  "loanName": "MKCurTest1",
-  "accountHolderKey": "8a8186ac692678910169288509c606bc",
-  "productTypeKey": "8a8187366a01d4a1016a023792a500b9",
-  "accountHolderType": "CLIENT",
-  "scheduleSettings": {
-        "defaultFirstRepaymentDueDateOffset": 2,
-        "gracePeriod": 0,
-        "gracePeriodType": "NONE",
-        "paymentPlan": [],
-        "periodicPayment": 0.0,
-        "principalRepaymentInterval": 1,
-        "repaymentInstallments": 12,
-        "repaymentPeriodCount": 1,
-        "repaymentPeriodUnit": "MONTHS",
-        "repaymentScheduleMethod": "DYNAMIC",
-        "scheduleDueDatesMethod": "INTERVAL"
-    },
-    "interestSettings": {
-        
-        "interestRate": 2.0
-    }
+  "loanAccount":{
+     "accountHolderKey": "8a8186ac692678910169288509c606bc",
+     "productTypeKey": "8a8187366a01d4a1016a023792a500b9",
+     "accountHolderType":"CLIENT",
+     "loanAmount":"50000",
+     "repaymentInstallments": 12,
+     "interestRate": 2.0
+   }
 }
