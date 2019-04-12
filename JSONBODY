@@ -1,10 +1,9 @@
 {
-  "loanAccount":{
-     "accountHolderKey": "8a8186ac692678910169288509c606bc",
-     "productTypeKey": "8a8187366a01d4a1016a023792a500b9",
-     "accountHolderType":"CLIENT",
-     "loanAmount":"50000",
-     "repaymentInstallments": 12,
-     "interestRate": 2.0
-   }
+  "transactionDetails": {
+    "transactionChannelId": "8a818e74677a2e9201677ec2b4c336a6"
+  },
+  "amount": 500,
+  "notes": "some notes",
+  "paymentOrderId": "MK1204_9",
+  "externalId": "MK1204_91"
 }
