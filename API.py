@@ -1,6 +1,7 @@
 import requests
 import pystache
 import json
+import uuid
 
 from IPython.core.display import HTML
 
@@ -20,12 +21,19 @@ def GET(url, *args,**kargs):
 
 
 
-def POST(url, body=None, *args,**kargs):
-    with open (body, "r") as myfile:
-        data=myfile.read()
+def POST(url, body=None, bodyparts=None, *args,**kargs):
+    if body is None:
         url = pystache.render(url, ENV)
-        r = requests.post(url, data=data, **kargs )
+        r = requests.post(url, data="{}", **kargs )
         return r
+    else:
+        with open (body, "r") as myfile:
+            data=myfile.read()
+            if bodyparts is not None:
+                data = pystache.render(data, bodyparts)
+            url = pystache.render(url, ENV)
+            r = requests.post(url, data=data, **kargs )
+            return r
 
 def PATCH(url, body=None, *args,**kargs):
     with open (body, "r") as myfile:
@@ -57,6 +65,25 @@ def PRINT(r):
     
 def PRINTHTML(htmlStr):
     HTML(htmlStr)
+    
+    
+# -------------------------------------------------------------------------------
+# Other helper functions
+
+def getUUID():
+    return str(uuid.uuid4())
+
+def writeFile(jsonDictOrStr, fileName):
+    if isinstance(jsonDictOrStr, dict):
+        jsonStr = json.dumps(jsonDictOrStr)
+    else:
+        jsonStr = jsonDictOrStr
+    with open (fileName, "w") as myfile:
+        myfile.write(jsonStr)
+        
+def readFile(fileName):
+    with open (fileName, "r") as myfile:
+        return myfile.read()
     
 # -------------------------------------------------------------------------------
 # Other more specific printing/output options

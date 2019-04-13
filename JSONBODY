@@ -1,9 +1,4 @@
 {
-  "transactionDetails": {
-    "transactionChannelId": "8a818e74677a2e9201677ec2b4c336a6"
-  },
-  "amount": 500,
-  "notes": "some notes",
-  "paymentOrderId": "MK1204_9",
-  "externalId": "MK1204_91"
+    "type": "CLOSE",
+    "notes": 'account closed via API'
 }
