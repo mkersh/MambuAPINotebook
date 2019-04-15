@@ -1,4 +1,12 @@
 {
-    "type": "CLOSE",
-    "notes": 'account closed via API'
+  "overdraftSettings": {
+	"allowOverdraft": true,
+	"overdraftLimit": 0
+  },
+  "accountType": "CURRENT_ACCOUNT",
+  "name": "MKCurTest1",
+  "accountHolderKey": "8a8186ac692678910169288509c606bc",
+  "productTypeKey": "8a8186aa69491c25016949888aeb10d2",
+  "currencyCode": "EUR",
+  "accountHolderType": "CLIENT"
 }

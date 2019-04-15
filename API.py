@@ -35,6 +35,18 @@ def POST(url, body=None, bodyparts=None, *args,**kargs):
             r = requests.post(url, data=data, **kargs )
             return r
 
+def POST2(url, data=None, bodyparts=None, *args,**kargs):
+    if data is None:
+        url = pystache.render(url, ENV)
+        r = requests.post(url, data="{}", **kargs )
+        return r
+    else:
+        if bodyparts is not None:
+            data = pystache.render(data, bodyparts)
+        url = pystache.render(url, ENV)
+        r = requests.post(url, data=data, **kargs )
+        return r
+        
 def PATCH(url, body=None, *args,**kargs):
     with open (body, "r") as myfile:
         data=myfile.read()
