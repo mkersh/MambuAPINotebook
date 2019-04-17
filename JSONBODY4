@@ -1,0 +1,12 @@
+{
+  "overdraftSettings": {
+	"allowOverdraft": true,
+	"overdraftLimit": 0
+  },
+  "accountType": "CURRENT_ACCOUNT",
+  "name": "MKCurTest1",
+  "accountHolderKey": "8a85879169f1de4c0169f289795519da",
+  "productTypeKey": "8a8586e46a235584016a24695e6214bd",
+  "currencyCode": "GBP",
+  "accountHolderType": "CLIENT"
+}
