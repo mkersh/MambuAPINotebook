@@ -1,12 +1,17 @@
 {
-  "overdraftSettings": {
-	"allowOverdraft": true,
-	"overdraftLimit": 0
+  "externalReferenceId": "cardExtRef6aSettle",
+  "externalAuthorizationReferenceId": "cardExtRef6a",
+  "transactionChannelId": "8a818e74677a2e9201677ec2b4c336a6",
+  "amount": 1,
+  "advice": false,
+  "cardAcceptor": {
+    "zip": "zipCode",
+    "country": "CountryStr",
+    "city": "CityStr",
+    "name": "Merchant Name",
+    "state": "State",
+    "mcc": 77
   },
-  "accountType": "CURRENT_ACCOUNT",
-  "name": "MKCurTest1",
-  "accountHolderKey": "8a8186ac692678910169288509c606bc",
-  "productTypeKey": "8a8186aa69491c25016949888aeb10d2",
-  "currencyCode": "EUR",
-  "accountHolderType": "CLIENT"
+  "userTransactionTime": "11:10:15",
+  "currencyCode": "EUR"
 }
