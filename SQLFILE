@@ -1,0 +1,4 @@
+CREATE TABLE table_name(
+   Field1 varchar(14) NOT NULL,
+   PRIMARY KEY( Field1 )
+);

@@ -1,4 +1,8 @@
 {
-	"msg": "Send This as a Test to MPO"
-	
+  "filterConstraints": [
+      {
+          "filterSelection": "MATURITY_DATE",
+          "filterElement": "TODAY"
+      }
+  ]
 }
