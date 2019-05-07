@@ -3,6 +3,13 @@
       {
           "filterSelection": "MATURITY_DATE",
           "filterElement": "TODAY"
-      }
+      },
+        {
+            "filterElement": "IN",
+            "filterSelection": "ACCOUNT_STATE",
+            "values": [
+                "ACTIVE"
+            ]
+        }
   ]
 }
