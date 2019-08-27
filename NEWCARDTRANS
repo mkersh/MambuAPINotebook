@@ -1,0 +1,9 @@
+{
+    "Amount": "10",
+    "DebitCardAvailable": "1000",
+    "DebitCardOnly": "F",
+    "Merchant": "Starbucks",
+    "POSCreditTypeChoice": "0",
+    "PurchaseCategory": "Food+Drink",
+    "transactionID": "{{TranID}}"
+}

@@ -1,0 +1,14 @@
+{
+  "filterConstraints":[
+      {
+        "filterSelection":"ACCOUNT_HOLDER_KEY",
+        "filterElement":"EQUALS",
+        "value":"{{CustomerID}}"
+      },
+      {
+        "filterSelection":"PRODUCT_KEY",
+        "filterElement":"EQUALS",
+        "value":"{{ProductKey}}"
+      }
+   ]
+}

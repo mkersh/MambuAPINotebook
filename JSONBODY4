@@ -1,12 +1,10 @@
 {
-  "overdraftSettings": {
-	"allowOverdraft": true,
-	"overdraftLimit": 0
+  "transactionDetails": {
+    "transactionChannelId": "8a818e74677a2e9201677ec2b4c336a6"
   },
-  "accountType": "CURRENT_ACCOUNT",
-  "name": "MKCurTest1",
-  "accountHolderKey": "8a85879169f1de4c0169f289795519da",
-  "productTypeKey": "8a8586e46a235584016a24695e6214bd",
-  "currencyCode": "GBP",
-  "accountHolderType": "CLIENT"
+  "amount": 5432,
+  "notes": "some notes",
+  "paymentOrderId": "{{UniqueID}}",
+  "externalId": "{{UniqueID}}",
+  "valueDate": "2018-06-21T00:00:00+02:00"
 }

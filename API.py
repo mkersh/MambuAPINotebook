@@ -97,6 +97,13 @@ def readFile(fileName):
     with open (fileName, "r") as myfile:
         return myfile.read()
     
+def expandPlaceholders(fileName, placeholders):
+    fileStr = readFile(fileName)
+    fileStr = pystache.render(fileStr, placeholders)
+    writeFile(fileStr, fileName)
+    fileStr = readFile(fileName)
+    return fileStr
+    
 # -------------------------------------------------------------------------------
 # Other more specific printing/output options
 

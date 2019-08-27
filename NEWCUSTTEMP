@@ -1,0 +1,16 @@
+{
+"firstName": "{{FirstName}}",
+"lastName": "{{LastName}}",
+"preferredLanguage": "ENGLISH",
+"addresses": [
+    {
+      "country": "UK",
+      "city": "Liverpool"
+    }
+],
+"notes": "Some Notes on this person",
+"gender": "MALE",
+  
+"assignedBranchKey": "{{BranchID}}"
+
+}

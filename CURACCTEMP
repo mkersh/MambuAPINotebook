@@ -1,0 +1,26 @@
+{
+  "overdraftInterestSettings": {
+        "interestRateSettings": {
+            "encodedKey": "8a818f9f6cc14d6e016cc2fcdbef4923",
+            "interestChargeFrequency": "ANNUALIZED",
+            "interestChargeFrequencyCount": 1,
+            "interestRateReviewCount": 31,
+            "interestRateReviewUnit": "DAYS",
+            "interestRateSource": "INDEX_INTEREST_RATE",
+            "interestRateTerms": "FIXED",
+            "interestSpread": 0.0
+        }
+    },
+    "overdraftSettings": {
+        "allowOverdraft": true,
+        "overdraftExpiryDate": "2020-05-02T00:00:00+02:00",
+        "overdraftLimit": 0.0
+    },
+  
+  "accountType": "CURRENT_ACCOUNT",
+  "name": "Current Account (with overdraft)",
+  "accountHolderKey": "{{CustomerID}}",
+  "productTypeKey": "8a818f5f6cbe6621016cbf4f2db95756",
+  "currencyCode": "EUR",
+  "accountHolderType": "CLIENT"
+}

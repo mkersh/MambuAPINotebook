@@ -1,0 +1,16 @@
+{
+    "amount": 10000.0,
+    "availableCreditAmount": 10000.0,
+    "expireDate": "2020-08-23T00:00:00+02:00",
+    "exposureLimitType": "OUTSTANDING_AMOUNT",
+    "holderKey": "{{CustomerID}}",
+    "holderType": "CLIENT",  
+    "notes": "",
+    "startDate": "2019-08-23T00:00:00+02:00",
+    "state": "APPROVED",
+    "_URepayOptions": {
+            "AutoRepayMethod": "Direct-Debit",
+            "PaymentDueDay": "1",
+            "ShortMonthOption": "late"
+        }
+}
