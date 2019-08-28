@@ -1,14 +1,13 @@
 {
   "overdraftInterestSettings": {
         "interestRateSettings": {
-            "encodedKey": "8a818f9f6cc14d6e016cc2fcdbef4923",
+            "encodedKey": "8a818f9c6cd48156016cd6ef16ec3c25",
             "interestChargeFrequency": "ANNUALIZED",
             "interestChargeFrequencyCount": 1,
-            "interestRateReviewCount": 31,
-            "interestRateReviewUnit": "DAYS",
-            "interestRateSource": "INDEX_INTEREST_RATE",
+            "interestRate": 0.0,
+            "interestRateSource": "FIXED_INTEREST_RATE",
             "interestRateTerms": "FIXED",
-            "interestSpread": 0.0
+            "interestRateTiers": []
         }
     },
     "overdraftSettings": {
@@ -18,7 +17,7 @@
     },
   
   "accountType": "CURRENT_ACCOUNT",
-  "name": "Current Account (with overdraft)",
+  "name": "TEMP Card Account",
   "accountHolderKey": "{{CustomerID}}",
   "productTypeKey": "{{ProductKey}}",
   "currencyCode": "EUR",

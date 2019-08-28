@@ -1,0 +1,4 @@
+{
+  "type": "DISBURSEMENT",
+  "amount": {{Amount}}
+}

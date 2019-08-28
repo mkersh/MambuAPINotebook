@@ -1,7 +1,7 @@
 {
     "amount": 10000.0,
     "availableCreditAmount": 10000.0,
-    "expireDate": "2020-08-23T00:00:00+02:00",
+    "expireDate": "2030-08-23T00:00:00+02:00",
     "exposureLimitType": "OUTSTANDING_AMOUNT",
     "holderKey": "{{CustomerID}}",
     "holderType": "CLIENT",  
