@@ -1,4 +1,5 @@
 {
   "type": "DISBURSEMENT",
-  "amount": {{Amount}}
+  "amount": {{Amount}},
+  "transactionChannelKey": "8a818f9c6cd48156016cd71cc9874322"
 }

@@ -1,0 +1,36 @@
+{
+  "loanAmount": {{LoanAmount}},
+  "loanName": "{{AccountName}}",
+  "accountHolderKey": "{{CustomerID}}",
+  "productTypeKey": "{{ProductKey}}",
+  "accountHolderType": "CLIENT",
+  "assignedBranchKey": "8a818f156ccf5fb1016cd2e8e4532b09",
+  "interestFromArrearsAccrued": 0.0,
+    "interestSettings": {
+        "accrueInterestAfterMaturity": false,
+        "interestApplicationMethod": "REPAYMENT_DUE_DATE",
+        "interestBalanceCalculationMethod": "ONLY_PRINCIPAL",
+        "interestCalculationMethod": "DECLINING_BALANCE",
+        "interestChargeFrequency": "ANNUALIZED",
+        "interestRate": 5.0,
+        "interestRateSource": "FIXED_INTEREST_RATE",
+        "interestType": "SIMPLE_INTEREST"
+    },
+  "scheduleSettings": {
+        "fixedDaysOfMonth": [
+            1
+        ],
+        "gracePeriod": 6,
+        "gracePeriodType": "INTEREST_FORGIVENESS",
+        "paymentPlan": [],
+        "periodicPayment": 0.0,
+        "principalRepaymentInterval": 1,
+        "repaymentInstallments": 12,
+        "repaymentPeriodCount": 0,
+        "repaymentPeriodUnit": "DAYS",
+        "repaymentScheduleMethod": "DYNAMIC",
+        "scheduleDueDatesMethod": "FIXED_DAYS_OF_MONTH",
+        "shortMonthHandlingMethod": "LAST_DAY_IN_MONTH"
+    }
+  
+}

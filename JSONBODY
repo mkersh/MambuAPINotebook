@@ -1,36 +1,13 @@
 {
-  "loanAmount": 30000.0,
-  "loanName": "{{AccountName}}",
-  "accountHolderKey": "{{CustomerID}}",
-  "productTypeKey": "{{ProductKey}}",
-  "accountHolderType": "CLIENT",
-  "assignedBranchKey": "8a818f156ccf5fb1016cd2e8e4532b09",
-  "interestFromArrearsAccrued": 0.0,
-    "interestSettings": {
-        "accrueInterestAfterMaturity": false,
-        "interestApplicationMethod": "REPAYMENT_DUE_DATE",
-        "interestBalanceCalculationMethod": "ONLY_PRINCIPAL",
-        "interestCalculationMethod": "DECLINING_BALANCE",
-        "interestChargeFrequency": "ANNUALIZED",
-        "interestRateReviewCount": 31,
-        "interestRateReviewUnit": "DAYS",
-        "interestRateSource": "INDEX_INTEREST_RATE",
-        "interestSpread": 0.0,
-        "interestType": "SIMPLE_INTEREST"
-    },
-  "scheduleSettings": {
-        "fixedDaysOfMonth": [
-            1
-        ],
-        "gracePeriod": 0,
-        "gracePeriodType": "NONE",
-        "paymentPlan": [],
-        "periodicPayment": 0.0,
-        "principalRepaymentInterval": 1,
-        "repaymentPeriodUnit": "DAYS",
-        "repaymentScheduleMethod": "DYNAMIC",
-        "scheduleDueDatesMethod": "FIXED_DAYS_OF_MONTH",
-        "shortMonthHandlingMethod": "LAST_DAY_IN_MONTH"
+  "amount": 31.00,
+  "notes": "Test repayment",
+  "customPaymentAmounts": [
+    {
+      "taxOnAmount": 0.00,
+      "amount": 31.00,
+      "customPaymentAmountType": "PRINCIPAL"
     }
-  
+  ],
+  "externalId": "{{UniqueID}}"
+
 }

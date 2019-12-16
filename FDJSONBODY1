@@ -1,0 +1,12 @@
+{
+  "filterConstraints": [
+      {
+          "filterElement": "IN",
+          "filterSelection": "ACCOUNT_STATE",
+          "values": [
+              "MATURED"
+          ]
+          
+      }
+  ]
+}
