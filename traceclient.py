@@ -25,16 +25,21 @@ def getTraceItem(i):
 
 def main():
     i = 0
+    traceItems = getTraceItem(-1)
+    i = len(traceItems)
+    for traceItem in traceItems:
+            print(traceItem)
 
     while True:
-        traceItem = getTraceItem(i)
-        while (traceItem!=""):
+        traceItem = getTraceItem(i)[0]   
+        while (traceItem!=None):
             print(traceItem)
             i += 1
-            traceItem = getTraceItem(i)
+            traceItem = getTraceItem(i)[0]
         g = input("0 - Reset, Other Key - Read Next ") 
         if (g == "0"):
             i = 0
+            return main()
         
     
     
