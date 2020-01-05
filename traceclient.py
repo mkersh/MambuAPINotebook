@@ -1,0 +1,42 @@
+from API import *
+from ENV import *
+import time
+import os
+
+def getTraceItem(i):
+    data = """
+    {
+        "methodToCall": "https://mpo-new.mambuonline.com/api/1/json/public/2104/6e510048ca071ae85b21491648098f8abd7bc2cc",
+        "params": {
+            "TraceSyncExample": 1,
+            "index": {{i}}
+        }	
+    }
+    """
+    HEADERS = {}
+    PARAMS = {}
+    bodyparts = {"i": i}
+    # s = time.perf_counter()
+    r = POST2('http://ec2-35-177-46-123.eu-west-2.compute.amazonaws.com:8001', headers=HEADERS, params=PARAMS, data=data, bodyparts=bodyparts)
+    # elapsed = time.perf_counter() - s
+    # print(f"Time Taken (secs) to Execute: {elapsed}")
+    # PRINT(r)
+    return r.json()["TRACE"]
+
+def main():
+    i = 0
+
+    while True:
+        traceItem = getTraceItem(i)
+        while (traceItem!=""):
+            print(traceItem)
+            i += 1
+            traceItem = getTraceItem(i)
+        g = input("0 - Reset, Other Key - Read Next ") 
+        if (g == "0"):
+            i = 0
+        
+    
+    
+if __name__ == '__main__':
+	main()

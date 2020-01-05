@@ -1,13 +1,8 @@
 {
-  "amount": 31.00,
-  "notes": "Test repayment",
-  "customPaymentAmounts": [
-    {
-      "taxOnAmount": 0.00,
-      "amount": 31.00,
-      "customPaymentAmountType": "PRINCIPAL"
-    }
-  ],
-  "externalId": "{{UniqueID}}"
-
+	"methodToCall": "https://mpo-new.mambuonline.com/api/1/json/public/2104/6e510048ca071ae85b21491648098f8abd7bc2cc",
+	"params": {
+		"TraceSyncExample": 1,
+		"index": 2
+	}
+	
 }
