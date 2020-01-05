@@ -36,10 +36,15 @@ def main():
             print(traceItem)
             i += 1
             traceItem = getTraceItem(i)[0]
-        g = input("0 - Reset, Other Key - Read Next ") 
+        g = input("0 - Reset, c - Clear, Other Key - Read Next ") 
         if (g == "0"):
             i = 0
             return main()
+        elif (g == "c"):
+            getTraceItem(-2)
+            // Not sure why?? but I need to call twice
+            getTraceItem(-2)
+            i = 0
         
     
     
