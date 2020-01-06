@@ -42,7 +42,7 @@ def main():
             return main()
         elif (g == "c"):
             getTraceItem(-2)
-            // Not sure why?? but I need to call twice
+            # Not sure why?? but I need to call twice
             getTraceItem(-2)
             i = 0
         
