@@ -1,56 +1,23 @@
 {
-   "tranches":[
-      {
-         "amount":"952016.00",
-         "expectedDisbursementDate":"2018-12-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2018-12-02T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-01-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-02-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-03-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-04-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-05-01T00:00:00+0000"
-      }, 
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-06-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-07-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-08-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-09-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.67",
-         "expectedDisbursementDate":"2019-10-01T00:00:00+0000"
-      },
-      {
-         "amount":"122123.63",
-         "expectedDisbursementDate":"2019-11-01T00:00:00+0000"
-      } 
-   ]
+"firstName": "Dominic",
+"lastName": "Smith",
+"preferredLanguage": "ENGLISH",
+"addresses": [
+    {
+      "country": "UK",
+      "city": "Liverpool"
+    }
+],
+"notes": "Some Notes on this person",
+"gender": "MALE",
+  
+"assignedBranchKey": "8a8186ac692678910169287cf43606af",
+"idDocuments": [
+	{
+	"documentType": "Passport",
+    "documentId": "0123456789",
+    "issuingAuthority": "UK",
+    "validUntil": "2020-02-06",
+    "identificationDocumentTemplateKey": "8a81879867f40eff0167f45206e8002b"
+    }]
 }
