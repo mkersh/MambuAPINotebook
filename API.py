@@ -2,6 +2,7 @@ import requests
 import pystache
 import json
 import uuid
+import ast
 
 from IPython.core.display import HTML
 
@@ -14,14 +15,42 @@ def setENV(envObj):
 def showenv():
     return ENV
 
-def GET(url, *args,**kargs):
+def GETOld(url, *args,**kargs):
+    url = pystache.render(url, ENV)
+    r = requests.get(url, **kargs )
+    return r
+
+def GET(url, headerparts=None, *args,**kargs):
+    if headerparts is not None:
+        headers = pystache.render(str(kargs['headers']), headerparts)
+        headers = ast.literal_eval(headers)
+        kargs['headers'] = headers
     url = pystache.render(url, ENV)
     r = requests.get(url, **kargs )
     return r
 
 
 
-def POST(url, body=None, bodyparts=None, *args,**kargs):
+def POST(url, body=None, bodyparts=None, headerparts=None, *args,**kargs):
+    if headerparts is not None:
+        headers = pystache.render(str(kargs['headers']), headerparts)
+        headers = ast.literal_eval(headers)
+        kargs['headers'] = headers
+    if body is None:
+        url = pystache.render(url, ENV)
+        r = requests.post(url, data="{}", **kargs )
+        return r
+    else:
+        with open (body, "r") as myfile:
+            data=myfile.read()
+            if bodyparts is not None:
+                data = pystache.render(data, bodyparts)
+            url = pystache.render(url, ENV)
+            r = requests.post(url, data=data, **kargs )
+            return r
+        
+# remove below once certain above new version doesn't break anything
+def POSTOld(url, body=None, bodyparts=None, *args,**kargs):
     if body is None:
         url = pystache.render(url, ENV)
         r = requests.post(url, data="{}", **kargs )
@@ -46,6 +75,8 @@ def POST2(url, data=None, bodyparts=None, *args,**kargs):
         url = pystache.render(url, ENV)
         r = requests.post(url, data=data, **kargs )
         return r
+    
+
         
 def PATCH(url, body=None, *args,**kargs):
     with open (body, "r") as myfile:
