@@ -1,0 +1,4 @@
+{
+    "owning_application": "streaming-api-",
+    "event_types": ["mrn.event.michaelgbp.streamingapi.client_activity"]
+}
