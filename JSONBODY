@@ -1,3 +1,14 @@
 {
-  
+"firstName": "test",
+"lastName": "customer X",
+"preferredLanguage": "ENGLISH",
+"addresses": [
+    {
+      "country": "UK",
+      "city": "Liverpool"
+    }
+],
+"notes": "Some Notes on this person",
+"assignedBranchKey": "8a193db771bfd66a0171d05a3f9a47bd"
+
 }
