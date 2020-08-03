@@ -1,12 +1,4 @@
 {
-  "loanAccount":{
-     "accountHolderKey": "8a8187b573b2da480173b2dc87ac000e",
-     "productTypeKey": "8a8187b573b2da480173b2f7743d0106",
-     "accountHolderType":"CLIENT",
-     "loanAmount":"55000",
-     "repaymentInstallments": 12,
-     "interestRate": 3.0,
-    "arrearsTolerancePeriod": 0,
-      "dummyattr": "12324"
-   }
+  "action": "CLOSE",
+  "notes": "Change status to close"
 }
