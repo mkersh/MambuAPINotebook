@@ -8,3 +8,6 @@ ENV.py
 *.sw*
 *.pyc
 *-checkpoint.ipynb
+Tests/streamApiClient/sseclient
+Tests/streamApiClient/pythonFlaskSSE/python-sse-example
+Tests/streamApiClient/pythonFlaskSSE/python-sse-example
