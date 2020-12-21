@@ -6,7 +6,7 @@ import os
 def getTraceItem(i):
     data = """
     {
-        "methodToCall": "https://mpo-new.mambuonline.com/api/1/json/public/2104/6e510048ca071ae85b21491648098f8abd7bc2cc",
+        "methodToCall": "https://mpo-multitenant.mambuonline.com/api/1/json/public/24326/288106d82551acf628173af5ec133678af28d495",
         "params": {
             "TraceSyncExample": 1,
             "index": {{i}}
