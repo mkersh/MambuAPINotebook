@@ -26,20 +26,22 @@ def getTraceItem(i):
     }
     """
     
-    HEADERS = {} 
+    HEADERS = {"Content-Type": "application/json"} 
     PARAMS = {}
     bodyparts = {"i": i}
     data = pystache.render(data, bodyparts)
     unixtime = int(time.time()) 
     secret = "xM2UVaT0ZfU4uAa08B8M4W1sCJfgY26g4jWpTGJInUTas7rAn0"
     signature = make_sign(secret, unixtime, data)
-    mpoSyncUrl = "https://mpo-multitenant-syncapi.mambuonline.com/api/1/json/214/" + unixtime +  "/" + signature
+    mpoSyncUrl = "https://mpo-multitenant-syncapi.mambuonline.com/api/1/json/214/" + str(unixtime) +  "/" + signature
     # s = time.perf_counter()
-    r = POST(mpoSyncUrl, headers=HEADERS, params=PARAMS, data=data)
+    r = POST2(mpoSyncUrl, headers=HEADERS, params=PARAMS, data=data)
     # elapsed = time.perf_counter() - s
     # print(f"Time Taken (secs) to Execute: {elapsed}")
+    # print("data = ", data)
+    # print("signature", signature)
     # PRINT(r)
-    return r.json()["TRACE"]
+    return r.json()["ops"][0]["data"]["TRACE"]
 
 def main():
     i = 0
