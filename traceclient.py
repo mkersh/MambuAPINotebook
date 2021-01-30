@@ -26,7 +26,7 @@ def getTraceItem(i):
     }
     """
     
-    HEADERS = {}
+    HEADERS = {} 
     PARAMS = {}
     bodyparts = {"i": i}
     data = pystache.render(data, bodyparts)
