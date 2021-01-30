@@ -33,7 +33,7 @@ def getTraceItem(i):
     unixtime = int(time.time()) 
     secret = ENV["mpo1"] 
     signature = make_sign(secret, unixtime, data)
-    mpoSyncUrl = "https://mpo-multitenant-syncapi.mambuonline.com/api/1/json/214/" + str(unixtime) +  "/" + signature
+    mpoSyncUrl = "https://mpo-multitenant-syncapi.mambuonline.com/api/1/json/220/" + str(unixtime) +  "/" + signature
     # s = time.perf_counter()
     r = POST2(mpoSyncUrl, headers=HEADERS, params=PARAMS, data=data)
     # elapsed = time.perf_counter() - s
