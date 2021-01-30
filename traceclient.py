@@ -31,7 +31,7 @@ def getTraceItem(i):
     bodyparts = {"i": i}
     data = pystache.render(data, bodyparts)
     unixtime = int(time.time()) 
-    secret = ENV["mpo1"]
+    secret = ENV["mpo1"] 
     signature = make_sign(secret, unixtime, data)
     mpoSyncUrl = "https://mpo-multitenant-syncapi.mambuonline.com/api/1/json/214/" + str(unixtime) +  "/" + signature
     # s = time.perf_counter()
