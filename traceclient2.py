@@ -2,40 +2,22 @@ from API import *
 from ENV import *
 import time
 import os
-import hashlib
-
- # Make a signature to sign the request
-# Signature: hex( sha1({GMT_UNIXTIME} + {API_SECRET} + {CONTENT} + {API_SECRET}) )
-def make_sign(secret, timestamp, content):
-    s = (str(timestamp) + secret + content + secret).encode('utf-8')
-    return hashlib.sha1(s).hexdigest()
 
 def getTraceItem(i):
     data = """
     {
-        "timeout": 30,
-        "ops": [{
-            "company_id": "i962764498",
-            "conv_id": 27845,
-            "type": "create",
-            "obj": "task",
-            "data": {
-                "index": {{i}} 
-            }
-        }]
+        "methodToCall": "https://mpo-multitenant.mambuonline.com/api/1/json/public/24326/288106d82551acf628173af5ec133678af28d495",
+        "params": {
+            "TraceSyncExample": 1,
+            "index": {{i}}
+        }	
     }
     """
-    
     HEADERS = {}
     PARAMS = {}
     bodyparts = {"i": i}
-    data = pystache.render(data, bodyparts)
-    unixtime = int(time.time()) 
-    secret = "xM2UVaT0ZfU4uAa08B8M4W1sCJfgY26g4jWpTGJInUTas7rAn0"
-    signature = make_sign(secret, unixtime, data)
-    mpoSyncUrl = "https://mpo-multitenant-syncapi.mambuonline.com/api/1/json/214/" + unixtime +  "/" + signature
     # s = time.perf_counter()
-    r = POST(mpoSyncUrl, headers=HEADERS, params=PARAMS, data=data)
+    r = POST2('http://ec2-35-177-46-123.eu-west-2.compute.amazonaws.com:8001', headers=HEADERS, params=PARAMS, data=data, bodyparts=bodyparts)
     # elapsed = time.perf_counter() - s
     # print(f"Time Taken (secs) to Execute: {elapsed}")
     # PRINT(r)
